@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.module.com"
+           elementFormDefault="qualified"
+           xmlns:item="http://www.item.com"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.item.com item.xsd">
+    <xs:element name="Item1">
+        <xs:complexType>
+            <xs:attribute name="Name" type="xs:string" use="required"></xs:attribute>
+            <xs:attribute name="Value" type="xs:string" use="required"></xs:attribute>
+            <xs:attribute name="Description" type="xs:string" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Module -->
+    <xs:element name="Module">
+        <xs:complexType>
+            <!--<xs:sequence>
+                <xs:element name="Item" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="Name" type="xs:string" use="required"></xs:attribute>
+                        <xs:attribute name="Value" type="xs:string" use="required"></xs:attribute>
+                        <xs:attribute name="Description" type="xs:string" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>-->
+            <xs:sequence>
+                <xs:element ref="item:Item"  maxOccurs="unbounded" ></xs:element>
+            </xs:sequence>
+            <xs:attribute name="Name" use="required"></xs:attribute>
+            <xs:attribute name="Type" use="required"></xs:attribute>
+            <xs:attribute name="Variable" use="required"></xs:attribute>
+            <xs:attribute name="Description" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
+

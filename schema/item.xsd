@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.item.com"
+           elementFormDefault="qualified">
+    <xs:element name="Item">
+        <xs:complexType>
+            <xs:attribute name="Name" type="xs:string" use="required"></xs:attribute>
+            <xs:attribute name="Value" type="xs:string" use="required"></xs:attribute>
+            <xs:attribute name="Description" type="xs:string" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

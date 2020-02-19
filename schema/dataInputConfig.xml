@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <!-- 测试schema文件的xml(DatainputConfig) -->
+<Configurations Name="kafka_connection_configuration" Descriptione="hdfs、Solr、HBase、Kafka等的配置信息" xmlns="http://www.fwx.com"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.fwx.com dataInputConfig.xsd">
+<Configuration Name="kafka_connection_configuration" Description="hdfs、Solr、HBase、Kafka等的配置信息">
+    <Module Name="kafka_connect" Type="kafka" Variable=" " Description="接入kafka数据之后进行提取操作的配置 ">
+        <Item Name="kafka.topic" Value="mybcpdata" Description="topic，多个时以,分割"/>
+    </Module>
+</Configuration>
+</Configurations>
